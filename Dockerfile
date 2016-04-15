@@ -5,7 +5,7 @@ ADD MariaDB.repo /etc/yum.repos.d/
 
 RUN yum update -y \
    && rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB \
-  && yum install -y galera \
+   && yum install -y MariaDB-server \
    && yum clean all
    
 ENTRYPOINT ["/bin/garbd"]
